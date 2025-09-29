@@ -4,7 +4,7 @@ import { Github, Linkedin, Mail, Download } from "lucide-react";
 
 const Hero = () => {
   const [displayText, setDisplayText] = useState("");
-  const fullText = "Full-Stack Developer";
+  const fullText = "Full-Stack Developer & Well..";
 
   useEffect(() => {
     let i = 0;
@@ -43,7 +43,7 @@ const Hero = () => {
         <div className="animate-slide-up">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             Hi, I'm{" "}
-            <span className="gradient-text">Your Name</span>
+            <span className="gradient-text">Tasima Hapazari</span>
           </h1>
           
           <div className="text-2xl md:text-4xl mb-8 font-mono">
@@ -53,8 +53,8 @@ const Hero = () => {
           </div>
           
           <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-            Passionate about creating elegant solutions to complex problems. 
-            I build modern web applications with cutting-edge technologies and clean, efficient code.
+            I build elegant solutions to complex problems with cutting-edge technologies and clean, efficient code. 
+            
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
