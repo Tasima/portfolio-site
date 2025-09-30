@@ -276,6 +276,166 @@ const Security = () => {
           </Card>
         </div>
 
+        {/* Metrics & Proof */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold mb-8 flex items-center">
+            <Target className="w-6 h-6 mr-3 text-primary" />
+            Metrics & Proof
+          </h3>
+          
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* Platform Badges */}
+            <Card className="bg-gradient-card border-border">
+              <CardHeader>
+                <CardTitle className="text-lg flex items-center">
+                  <Badge className="w-5 h-5 mr-3 text-primary" />
+                  Platform Achievements
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between p-3 rounded-lg bg-background/50">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 bg-green-500/20 rounded-full flex items-center justify-center">
+                        <CheckCircle className="w-4 h-4 text-green-400" />
+                      </div>
+                      <div>
+                        <span className="font-medium text-sm">TryHackMe</span>
+                        <p className="text-xs text-muted-foreground">Top 15% globally</p>
+                      </div>
+                    </div>
+                    <Badge variant="outline" className="text-xs border-green-400 text-green-400">
+                      Rank 85
+                    </Badge>
+                  </div>
+                  
+                  <div className="flex items-center justify-between p-3 rounded-lg bg-background/50">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center">
+                        <Key className="w-4 h-4 text-blue-400" />
+                      </div>
+                      <div>
+                        <span className="font-medium text-sm">HackTheBox</span>
+                        <p className="text-xs text-muted-foreground">Script Kiddie</p>
+                      </div>
+                    </div>
+                    <Badge variant="outline" className="text-xs border-blue-400 text-blue-400">
+                      Active
+                    </Badge>
+                  </div>
+                  
+                  <div className="flex items-center justify-between p-3 rounded-lg bg-background/50">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">
+                        <Zap className="w-4 h-4 text-orange-400" />
+                      </div>
+                      <div>
+                        <span className="font-medium text-sm">HackerRank</span>
+                        <p className="text-xs text-muted-foreground">Security domain</p>
+                      </div>
+                    </div>
+                    <Badge variant="outline" className="text-xs border-orange-400 text-orange-400">
+                      5 Star
+                    </Badge>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            
+            {/* Security Scorecard */}
+            <Card className="bg-gradient-card border-border">
+              <CardHeader>
+                <CardTitle className="text-lg flex items-center">
+                  <Shield className="w-5 h-5 mr-3 text-primary" />
+                  Portfolio Security Scan
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="text-center mb-4">
+                  <div className="text-3xl font-bold text-green-400 mb-1">A+</div>
+                  <p className="text-sm text-muted-foreground">Overall Security Grade</p>
+                </div>
+                
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm">HTTPS Enforcement</span>
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm">Content Security Policy</span>
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm">XSS Protection</span>
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm">Dependency Scanning</span>
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm">No Mixed Content</span>
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                  </div>
+                </div>
+                
+                <Button variant="outline" className="w-full mt-4 text-xs">
+                  <ExternalLink className="w-3 h-3 mr-2" />
+                  View Full Report
+                </Button>
+              </CardContent>
+            </Card>
+            
+            {/* Security Progress Tracker */}
+            <Card className="bg-gradient-card border-border">
+              <CardHeader>
+                <CardTitle className="text-lg flex items-center">
+                  <Eye className="w-5 h-5 mr-3 text-primary" />
+                  Security Journey
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="text-center mb-4">
+                  <div className="text-3xl font-bold gradient-text mb-1">72%</div>
+                  <p className="text-sm text-muted-foreground">Goals Completed</p>
+                </div>
+                
+                <div className="w-full bg-muted rounded-full h-3 overflow-hidden mb-4">
+                  <div 
+                    className="h-3 bg-gradient-to-r from-primary to-primary-glow rounded-full transition-all duration-1000 ease-out"
+                    style={{ width: '72%' }}
+                  ></div>
+                </div>
+                
+                <div className="space-y-3 text-sm">
+                  <div className="flex items-center justify-between">
+                    <span>Certifications</span>
+                    <span className="text-primary font-mono">2/3</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span>Security Projects</span>
+                    <span className="text-primary font-mono">4/5</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span>CTF Challenges</span>
+                    <span className="text-primary font-mono">24/30</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span>Vulnerability Reports</span>
+                    <span className="text-primary font-mono">8/10</span>
+                  </div>
+                </div>
+                
+                <div className="pt-2 border-t border-border">
+                  <p className="text-xs text-muted-foreground text-center">
+                    Next milestone: <span className="text-primary">Security+ Cert</span>
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
         {/* Future Goals */}
         <div className="text-center">
           <h3 className="text-2xl font-bold mb-6 flex items-center justify-center">
