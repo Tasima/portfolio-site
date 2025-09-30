@@ -4,7 +4,7 @@ import { Github, Linkedin, Mail, Download } from "lucide-react";
 
 const Hero = () => {
   const [displayText, setDisplayText] = useState("");
-  const fullText = "Full-Stack Developer & Well..";
+  const fullText = "Developer & Well...";
 
   useEffect(() => {
     let i = 0;
