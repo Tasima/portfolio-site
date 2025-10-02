@@ -20,7 +20,7 @@ const GitHubContributions = () => {
   const [stats, setStats] = useState<GitHubStats | null>(null);
   const [contributions, setContributions] = useState<ContributionDay[]>([]);
   const [loading, setLoading] = useState(true);
-  const [username] = useState("yourusername"); // Replace with your GitHub username
+  const [username] = useState("tasima"); 
 
   // Generate mock contribution data (replace with real API call)
   const generateContributionData = (): ContributionDay[] => {
@@ -46,10 +46,11 @@ const GitHubContributions = () => {
     const fetchGitHubData = async () => {
       try {
         // Real implementation would use GitHub API:
-        // const response = await fetch(`https://api.github.com/users/${username}/events?per_page=100`);
-        // const events = await response.json();
+        const response = await fetch(`https://api.github.com/users/${username}/events?per_page=100`);
+        const events = await response.json();
         
         // For now, using mock data
+        /*
         setTimeout(() => {
           setContributions(generateContributionData());
           setStats({
@@ -60,10 +61,12 @@ const GitHubContributions = () => {
           });
           setLoading(false);
         }, 1000);
+        */
       } catch (error) {
         console.error('Error fetching GitHub data:', error);
         setLoading(false);
       }
+        
     };
 
     fetchGitHubData();

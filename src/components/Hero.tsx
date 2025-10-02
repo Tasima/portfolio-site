@@ -4,7 +4,7 @@ import { Github, Linkedin, Mail, Download } from "lucide-react";
 
 const Hero = () => {
   const [displayText, setDisplayText] = useState("");
-  const fullText = "Developer & Well...";
+  const fullText = "Engineer & Analyst";
 
   useEffect(() => {
     let i = 0;
@@ -42,18 +42,18 @@ const Hero = () => {
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="animate-slide-up">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Hi, I'm{" "}
+            Hi, I'm  {" "}
             <span className="gradient-text">Tasima Hapazari</span>
           </h1>
           
           <div className="text-2xl md:text-4xl mb-8 font-mono">
-            <span className="text-muted-foreground">I'm a </span>
+            <span className="text-muted-foreground">An </span>
             <span className="text-primary">{displayText}</span>
             <span className="terminal-cursor text-primary">|</span>
           </div>
           
           <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-            I build elegant solutions to complex problems with cutting-edge technologies and clean, efficient code. 
+              Which basically means I spend my days designing and building software, and nights bashing them with a crowbar. It's a bit of a dark hobby, but it's what I do best. Take a peek at this vicious cycle.
             
           </p>
           
