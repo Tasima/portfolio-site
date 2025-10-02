@@ -61,7 +61,7 @@ const Projects = () => {
       title: "Portfolio Website",
       description:
         "Modern, responsive portfolio website built with cutting-edge technologies and smooth animations.",
-      image: "/api/placeholder/400/250",
+      image: "/portfolio-screenshot.png",
       technologies: ["React", "TypeScript", "Tailwind", "Framer Motion"],
       category: "Frontend",
       github: "https://github.com/yourusername/portfolio",
@@ -72,8 +72,7 @@ const Projects = () => {
       title: "Custom BitTorrent Client",
       description:
         "A peer-to-peer file sharing implementation in Python, handling torrent files, peer discovery, piece downloading, and uploading.",
-      image:
-        "public\Screenshot 2025-10-03 014610.png",
+      image: "/bittorrent-screenshot.png",
       technologies: ["Python", "asyncio", "bencode.py"],
       category: "Networking & Distributed Systems",
       github: "https://github.com/Tasima/bittorrent-client",
