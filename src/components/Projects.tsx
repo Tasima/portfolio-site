@@ -73,7 +73,7 @@ const Projects = () => {
       description:
         "A peer-to-peer file sharing implementation in Python, handling torrent files, peer discovery, piece downloading, and uploading.",
       image:
-        "https://www.bittorrent.com/static/btclassic-windows-screen-e53b087817da3efa977e2c6f9a4c52a1.jpg",
+        "public\Screenshot 2025-10-03 014610.png",
       technologies: ["Python", "asyncio", "bencode.py"],
       category: "Networking & Distributed Systems",
       github: "https://github.com/Tasima/bittorrent-client",
