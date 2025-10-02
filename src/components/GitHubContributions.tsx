@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { GitBranch, GitCommit, Star } from "lucide-react";
+import { fetchGitHubContributions } from "@/services/githubAPI";
+import { useToast } from "@/hooks/use-toast";
 
 interface GitHubStats {
   totalCommits: number;
@@ -21,53 +23,27 @@ interface ContributionDay {
   const [stats, setStats] = useState<GitHubStats | null>(null);
   const [contributions, setContributions] = useState<ContributionDay[]>([]);
   const [loading, setLoading] = useState(true);
-  const [username] = useState("tasima"); 
-
-  // Generate mock contribution data (replace with real API call)
-  const generateContributionData = (): ContributionDay[] => {
-    const data: ContributionDay[] = [];
-    const today = new Date();
-    const startDate = new Date(today);
-    startDate.setDate(startDate.getDate() - 365);
-
-    for (let d = new Date(startDate); d <= today; d.setDate(d.getDate() + 1)) {
-      const count = Math.floor(Math.random() * 8);
-      const level = count === 0 ? 0 : count <= 2 ? 1 : count <= 4 ? 2 : count <= 6 ? 3 : 4;
-      
-      data.push({
-        date: d.toISOString().split('T')[0],
-        count,
-        level: level as 0 | 1 | 2 | 3 | 4
-      });
-    }
-    return data;
-  };
+  const [username] = useState("Tasima");
+  const { toast } = useToast();
 
   useEffect(() => {
     const fetchGitHubData = async () => {
       try {
-        // Real implementation would use GitHub API:
-        const response = await fetch(`https://api.github.com/users/${username}/events?per_page=100`);
-        const events = await response.json();
+        // Fetch real GitHub data using GraphQL API
+        const data = await fetchGitHubContributions(username);
         
-        // For now, using mock data
-        /*
-        setTimeout(() => {
-          setContributions(generateContributionData());
-          setStats({
-            totalCommits: 1247,
-            currentStreak: 12,
-            longestStreak: 45,
-            contributionsThisYear: 342
-          });
-          setLoading(false);
-        }, 1000);
-        */
+        setContributions(data.contributions);
+        setStats(data.stats);
+        setLoading(false);
       } catch (error) {
         console.error('Error fetching GitHub data:', error);
+        toast({
+          title: "GitHub API Error",
+          description: "Unable to fetch contribution data. Using placeholder data.",
+          variant: "destructive",
+        });
         setLoading(false);
       }
-        
     };
 
     fetchGitHubData();
@@ -75,7 +51,7 @@ interface ContributionDay {
     // Set up real-time updates every 30 minutes
     const interval = setInterval(fetchGitHubData, 30 * 60 * 1000);
     return () => clearInterval(interval);
-  }, [username]);
+  }, [username, toast]);
 
   const getContributionColor = (level: number): string => {
     const colors = [
