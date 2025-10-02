@@ -90,7 +90,7 @@ function calculateStreaks(contributions: ContributionDay[]): {
 /**
  * Fetch GitHub contribution data using GraphQL API
  */
-export async function fetchGitHubContributions(
+/*export async function fetchGitHubContributions(
   username: string,
   token?: string
 ): Promise<GitHubApiResponse> {
@@ -163,7 +163,7 @@ export async function fetchGitHubContributions(
     console.error('Error fetching GitHub data:', error);
     throw error;
   }
-}
+}*/
 
 /**
  * Fetch total commits across all repositories (requires REST API)

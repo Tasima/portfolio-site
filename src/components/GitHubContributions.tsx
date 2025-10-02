@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -16,7 +17,7 @@ interface ContributionDay {
   level: 0 | 1 | 2 | 3 | 4;
 }
 
-const GitHubContributions = () => {
+/*const GitHubContributions = () => {
   const [stats, setStats] = useState<GitHubStats | null>(null);
   const [contributions, setContributions] = useState<ContributionDay[]>([]);
   const [loading, setLoading] = useState(true);
@@ -283,5 +284,6 @@ const GitHubContributions = () => {
     </section>
   );
 };
-
 export default GitHubContributions;
+*/
+export {}
