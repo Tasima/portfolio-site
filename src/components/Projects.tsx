@@ -2,14 +2,14 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { 
-  ExternalLink, 
-  Github, 
-  Code, 
-  Database, 
+import {
+  ExternalLink,
+  Github,
+  Code,
+  Database,
   Smartphone,
   Globe,
-  Filter
+  Filter,
 } from "lucide-react";
 
 const Projects = () => {
@@ -17,80 +17,90 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with payment integration, admin dashboard, and real-time inventory management.",
-      image: "/api/placeholder/400/250",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Redis"],
-      category: "Full Stack",
-      github: "https://github.com/yourusername/ecommerce",
-      live: "https://your-ecommerce-demo.com",
-      featured: true
+      title: "Order Management System",
+      description:
+        "C# application for e-commerce order processing, including customer creation, inventory checks, picking lists, and expired products reports with UML designs.",
+      image: "https://i.ytimg.com/vi/JMJ1elL6Hmg/sddefault.jpg",
+      technologies: ["C#", ".NET", "Relational Database (SQL)", "UML"],
+      category: "Enterprise Applications & SDLC",
+      github: "https://github.com/Tasima/FormsOrderManagement",
+      live: "",
+      featured: false,
     },
     {
-      title: "Task Management App",
-      description: "Collaborative project management tool with real-time updates, file sharing, and team collaboration features.",
-      image: "/api/placeholder/400/250", 
-      technologies: ["Vue.js", "Firebase", "Vuetify", "Cloud Functions"],
-      category: "Frontend",
-      github: "https://github.com/yourusername/taskmanager",
-      live: "https://your-taskmanager.com",
-      featured: true
+      title: "Secure Offline Chat App",
+      description:
+        "Offline-first Android chat application using delay-tolerant networking, end-to-end encryption, and QR code scanning for user onboarding.",
+      image:
+        "https://s3-alpha.figma.com/hub/file/3075854123/21af9492-af1c-4b43-b31f-6ba683acfc10-cover.png",
+      technologies: [
+        "Android",
+        "Kotlin/Java",
+        "ZXing",
+        "Libsodium",
+        "Nearby Connections API",
+      ],
+      category: "Mobile & Secure Applications",
+      github: "https://github.com/Tasima/Nexa-Final",
+      live: "",
+      featured: false,
     },
     {
-      title: "Weather Analytics API",
-      description: "RESTful API for weather data analytics with machine learning predictions and historical data visualization.",
-      image: "/api/placeholder/400/250",
-      technologies: ["Python", "FastAPI", "PostgreSQL", "ML", "Docker"],
-      category: "Backend",
-      github: "https://github.com/yourusername/weather-api",
-      live: "https://api.your-weather.com/docs",
-      featured: false
-    },
-    {
-      title: "Mobile Fitness Tracker",
-      description: "Cross-platform mobile app for fitness tracking with workout plans, progress visualization, and social features.",
-      image: "/api/placeholder/400/250",
-      technologies: ["React Native", "Expo", "Supabase", "Charts"],
-      category: "Mobile",
-      github: "https://github.com/yourusername/fitness-tracker",
-      live: "https://play.google.com/store/apps/details?id=com.yourapp",
-      featured: true
+      title: "Parallel Computing and CPU Scheduling Simulator",
+      description:
+        "Java experiments comparing sequential vs. parallel performance and simulating CPU scheduling algorithms with detailed reports and graphs.",
+      image:
+        "https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/images/Chapter5/5_02_CPU_Histogram.jpg",
+      technologies: ["Java", "Threads/Executors", "JFreeChart"],
+      category: "Systems & Performance Engineering",
+      github: "https://github.com/Tasima/PCP_ParallelAssignment202",
+      live: "",
+      featured: false,
     },
     {
       title: "Portfolio Website",
-      description: "Modern, responsive portfolio website built with cutting-edge technologies and smooth animations.",
+      description:
+        "Modern, responsive portfolio website built with cutting-edge technologies and smooth animations.",
       image: "/api/placeholder/400/250",
       technologies: ["React", "TypeScript", "Tailwind", "Framer Motion"],
       category: "Frontend",
       github: "https://github.com/yourusername/portfolio",
       live: "https://yourportfolio.com",
-      featured: false
+      featured: false,
     },
     {
-      title: "Blog CMS Platform",
-      description: "Content management system for bloggers with markdown support, SEO optimization, and analytics dashboard.",
-      image: "/api/placeholder/400/250",
-      technologies: ["Next.js", "MongoDB", "Prisma", "TailwindCSS"],
-      category: "Full Stack",
-      github: "https://github.com/yourusername/blog-cms",
-      live: "https://your-blog-cms.com",
-      featured: false
-    }
+      title: "Custom BitTorrent Client",
+      description:
+        "A peer-to-peer file sharing implementation in Python, handling torrent files, peer discovery, piece downloading, and uploading.",
+      image:
+        "https://www.bittorrent.com/static/btclassic-windows-screen-e53b087817da3efa977e2c6f9a4c52a1.jpg",
+      technologies: ["Python", "asyncio", "bencode.py"],
+      category: "Networking & Distributed Systems",
+      github: "https://github.com/Tasima/bittorrent-client",
+      live: "",
+      featured: false,
+    },
   ];
 
   const categories = ["All", "Full Stack", "Frontend", "Backend", "Mobile"];
-  
-  const filteredProjects = selectedFilter === "All" 
-    ? projects 
-    : projects.filter(project => project.category === selectedFilter);
+
+  const filteredProjects =
+    selectedFilter === "All"
+      ? projects
+      : projects.filter((project) => project.category === selectedFilter);
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case "Full Stack": return Globe;
-      case "Frontend": return Code;
-      case "Backend": return Database;
-      case "Mobile": return Smartphone;
-      default: return Code;
+      case "Full Stack":
+        return Globe;
+      case "Frontend":
+        return Code;
+      case "Backend":
+        return Database;
+      case "Mobile":
+        return Smartphone;
+      default:
+        return Code;
     }
   };
 
@@ -102,8 +112,8 @@ const Projects = () => {
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            A collection of projects showcasing my skills in various technologies 
-            and problem-solving approaches.
+            A collection of projects showcasing my skills in various
+            technologies and problem-solving approaches.
           </p>
         </div>
 
@@ -117,8 +127,8 @@ const Projects = () => {
                 variant={selectedFilter === category ? "default" : "outline"}
                 onClick={() => setSelectedFilter(category)}
                 className={`${
-                  selectedFilter === category 
-                    ? "bg-primary text-primary-foreground glow-effect" 
+                  selectedFilter === category
+                    ? "bg-primary text-primary-foreground glow-effect"
                     : "border-border hover:border-primary"
                 }`}
               >
@@ -132,7 +142,7 @@ const Projects = () => {
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
-            <Card 
+            <Card
               key={index}
               className={`group bg-gradient-card border-border hover:shadow-elegant transition-all duration-500 overflow-hidden ${
                 project.featured ? "lg:col-span-2" : ""
@@ -145,7 +155,7 @@ const Projects = () => {
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
+
                 {project.featured && (
                   <Badge className="absolute top-4 left-4 bg-primary text-primary-foreground">
                     Featured
@@ -160,12 +170,20 @@ const Projects = () => {
                   </CardTitle>
                   <div className="flex space-x-2">
                     <Button size="sm" variant="ghost" asChild>
-                      <a href={project.github} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Github className="w-4 h-4" />
                       </a>
                     </Button>
                     <Button size="sm" variant="ghost" asChild>
-                      <a href={project.live} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <ExternalLink className="w-4 h-4" />
                       </a>
                     </Button>
@@ -177,10 +195,10 @@ const Projects = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   {project.description}
                 </p>
-                
+
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, techIndex) => (
-                    <Badge 
+                    <Badge
                       key={techIndex}
                       variant="secondary"
                       className="bg-surface-variant text-foreground border border-border"
@@ -192,13 +210,21 @@ const Projects = () => {
 
                 <div className="pt-4 flex space-x-3">
                   <Button asChild className="flex-1">
-                    <a href={project.live} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <ExternalLink className="w-4 h-4 mr-2" />
                       Live Demo
                     </a>
                   </Button>
                   <Button variant="outline" asChild>
-                    <a href={project.github} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Github className="w-4 h-4 mr-2" />
                       Code
                     </a>
@@ -211,8 +237,8 @@ const Projects = () => {
 
         {/* View More Button */}
         <div className="text-center mt-12">
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             size="lg"
             className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
           >
