@@ -79,6 +79,18 @@ const Projects = () => {
       live: "",
       featured: false,
     },
+    {
+      title: "Parallel Abelian Sandpile Simulator",
+      description:
+        "Java-based simulator for the Abelian sandpile model using concurrent programming to generate fractal patterns and visualizations.",
+      image:
+        "https://ista.ac.at/wp-content/uploads/2019/04/unnamed-file-352.jpeg",
+      technologies: ["Java", "java.util.concurrent", "BufferedImage"],
+      category: "Concurrent & Scientific Computing",
+      github: "https://github.com/Tasima/AbelianSampleSimulation",
+      live: "",
+      featured: false,
+    },
   ];
 
   const categories = ["All", "Full Stack", "Frontend", "Backend", "Mobile"];
