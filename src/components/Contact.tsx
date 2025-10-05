@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import { 
   Mail, 
   MapPin, 
@@ -16,6 +18,25 @@ import {
   Instagram
 } from "lucide-react";
 
+const contactFormSchema = z.object({
+  name: z.string()
+    .trim()
+    .min(1, "Name is required")
+    .max(100, "Name must be less than 100 characters"),
+  email: z.string()
+    .trim()
+    .email("Invalid email address")
+    .max(255, "Email must be less than 255 characters"),
+  subject: z.string()
+    .trim()
+    .min(1, "Subject is required")
+    .max(200, "Subject must be less than 200 characters"),
+  message: z.string()
+    .trim()
+    .min(1, "Message is required")
+    .max(5000, "Message must be less than 5000 characters")
+});
+
 const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
@@ -25,6 +46,7 @@ const Contact = () => {
     message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState<Record<string, string>>({});
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -32,15 +54,48 @@ const Contact = () => {
       ...prev,
       [name]: value
     }));
+    // Clear error for this field when user starts typing
+    if (errors[name]) {
+      setErrors(prev => {
+        const next = { ...prev };
+        delete next[name];
+        return next;
+      });
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setErrors({});
+    
+    // Client-side validation
+    const validation = contactFormSchema.safeParse(formData);
+    if (!validation.success) {
+      const newErrors: Record<string, string> = {};
+      validation.error.errors.forEach(err => {
+        if (err.path[0]) {
+          newErrors[err.path[0] as string] = err.message;
+        }
+      });
+      setErrors(newErrors);
+      toast({
+        title: "Validation Error",
+        description: "Please check the form for errors",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
-    // Simulate form submission
     try {
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: formData
+      });
+
+      if (error) {
+        throw error;
+      }
       
       toast({
         title: "Message Sent!",
@@ -53,10 +108,11 @@ const Contact = () => {
         subject: "",
         message: ""
       });
-    } catch (error) {
+    } catch (error: any) {
+      console.error("Error sending message:", error);
       toast({
         title: "Error",
-        description: "Failed to send message. Please try again.",
+        description: error.message || "Failed to send message. Please try again.",
         variant: "destructive",
       });
     } finally {
@@ -95,7 +151,7 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: "LinkedIn", 
-      href: "www.linkedin.com/in/tasima-hapazari-6816041b8e",
+      href: "https://www.linkedin.com/in/tasima-hapazari-6816041b8e",
       color: "hover:text-blue-400"
     },
     {
@@ -144,6 +200,9 @@ const Contact = () => {
                       required
                       className="bg-background border-border focus:border-primary"
                     />
+                    {errors.name && (
+                      <p className="text-sm text-destructive">{errors.name}</p>
+                    )}
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-sm font-medium">
@@ -159,6 +218,9 @@ const Contact = () => {
                       required
                       className="bg-background border-border focus:border-primary"
                     />
+                    {errors.email && (
+                      <p className="text-sm text-destructive">{errors.email}</p>
+                    )}
                   </div>
                 </div>
                 
@@ -175,6 +237,9 @@ const Contact = () => {
                     required
                     className="bg-background border-border focus:border-primary"
                   />
+                  {errors.subject && (
+                    <p className="text-sm text-destructive">{errors.subject}</p>
+                  )}
                 </div>
                 
                 <div className="space-y-2">
@@ -191,6 +256,9 @@ const Contact = () => {
                     required
                     className="bg-background border-border focus:border-primary resize-none"
                   />
+                  {errors.message && (
+                    <p className="text-sm text-destructive">{errors.message}</p>
+                  )}
                 </div>
                 
                 <Button
