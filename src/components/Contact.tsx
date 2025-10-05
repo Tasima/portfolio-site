@@ -5,7 +5,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
 import { 
   Mail, 
   MapPin, 
@@ -89,13 +88,8 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const { data, error } = await supabase.functions.invoke('send-contact-email', {
-        body: formData
-      });
-
-      if (error) {
-        throw error;
-      }
+      // Simulate sending email - in production, this would call an API
+      await new Promise(resolve => setTimeout(resolve, 1000));
       
       toast({
         title: "Message Sent!",
