@@ -98,14 +98,16 @@ const Hero = () => {
             >
               <Mail className="w-6 h-6" />
             </a>
-            <Button
-              variant="ghost"
-              size="sm"
-              className="text-muted-foreground hover:text-primary"
-            >
-              <Download className="w-4 h-4 mr-2" />
-              Resume
-            </Button>
+            <a href="/Resume.pdf" download="Tasima_Hapazari_Resume.pdf">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="text-muted-foreground hover:text-primary"
+              >
+                <Download className="w-4 h-4 mr-2" />
+                Resume
+              </Button>
+            </a>
           </div>
         </div>
       </div>
