@@ -361,41 +361,49 @@ const Security = () => {
               <CardHeader>
                 <CardTitle className="text-lg flex items-center">
                   <Shield className="w-5 h-5 mr-3 text-primary" />
-                  Portfolio Page Security Scan
+                  Portfolio Security Scan
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="text-center mb-4">
-                  <div className="text-3xl font-bold text-green-400 mb-1">A+</div>
-                  <p className="text-sm text-muted-foreground">Overall Security Grade</p>
+                  <div className="text-3xl font-bold text-green-400 mb-1">A</div>
+                  <p className="text-sm text-muted-foreground">Overall UpGuard Grade (837/950)</p>
                 </div>
                 
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-sm">HTTPS Enforcement</span>
+                    <span className="text-sm">Website Security (Passed 6/9)</span>
                     <CheckCircle className="w-4 h-4 text-green-400" />
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-sm">Content Security Policy</span>
+                    <span className="text-sm">Network</span>
                     <CheckCircle className="w-4 h-4 text-green-400" />
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-sm">XSS Protection</span>
+                    <span className="text-sm">DNS (Passed 2/3)</span>
                     <CheckCircle className="w-4 h-4 text-green-400" />
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-sm">Dependency Scanning</span>
+                    <span className="text-sm">Encryption (Passed 16/17)</span>
                     <CheckCircle className="w-4 h-4 text-green-400" />
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-sm">No Mixed Content</span>
+                    <span className="text-sm">Data Leakage Test</span>
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm">IP/Domain Repuatation</span>
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm">Vulnerability Management</span>
                     <CheckCircle className="w-4 h-4 text-green-400" />
                   </div>
                 </div>
                 
                 <Button variant="outline" className="w-full mt-4 text-xs">
                   <ExternalLink className="w-3 h-3 mr-2" />
-                  View Full Report
+                  <a href="https://www.upguard.com/instant-security-score/report?c=https%3A%2F%2Ftasima-hapazari.vercel.app%2F" target="_blank">View Full Report</a>
                 </Button>
               </CardContent>
             </Card>
