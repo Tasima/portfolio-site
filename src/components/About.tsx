@@ -41,24 +41,25 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg leading-relaxed">
-              As a final year Computer Science student, I've spent years building a solid 
+              As a final year Computer Science student, I've spent the past few years building a solid 
               foundation in software development, algorithms, and system design. My journey 
               has been driven by curiosity and a desire to solve real-world problems 
-              through technology.
+              with technology.
             </p>
             
             <p className="text-lg leading-relaxed text-muted-foreground">
-              I enjoy working with modern web technologies and am always eager to learn 
-              new frameworks and tools. When I'm not coding, you'll find me exploring 
-              new tech trends, contributing to open source projects, or working on 
-              personal projects that challenge my skills.
+              I'm an aspiring cybersecurity-focused software developer based in Cape Town. 
+              I'm majoring in CS and Business Computing and I want to ultimately dive into the field
+              of digital forensics and security. I'm pursuing an entry level SAP certification currently and want to be the 
+              most well rounded developer I can. Full stack, mobile development and business process analysis are all 
+              things I can bring to the table. 
             </p>
 
             <div className="pt-4">
               <h3 className="text-xl font-semibold mb-4 text-primary">Quick Stats</h3>
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center p-4 bg-gradient-card rounded-lg border border-border">
-                  <div className="text-2xl font-bold text-primary">20+</div>
+                  <div className="text-2xl font-bold text-primary">7+</div>
                   <div className="text-sm text-muted-foreground">Projects Completed</div>
                 </div>
                 <div className="text-center p-4 bg-gradient-card rounded-lg border border-border">

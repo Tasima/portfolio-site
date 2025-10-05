@@ -12,7 +12,8 @@ import {
   Github, 
   Linkedin, 
   Twitter,
-  MessageCircle 
+  MessageCircle,
+  Instagram
 } from "lucide-react";
 
 const Contact = () => {
@@ -67,19 +68,19 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "your.email@example.com",
-      href: "mailto:your.email@example.com"
+      value: "tasimahapaz@gmail.com",
+      href: "mailto:tasimahapaz@gmail.com"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
+      value: "+27 67 589 0416",
       href: "tel:+15551234567"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "Your City, Country",
+      value: "Cape Town, South Africa",
       href: "#"
     }
   ];
@@ -88,19 +89,19 @@ const Contact = () => {
     {
       icon: Github,
       label: "GitHub",
-      href: "https://github.com/yourusername",
+      href: "https://github.com/Tasima",
       color: "hover:text-primary"
     },
     {
       icon: Linkedin,
       label: "LinkedIn", 
-      href: "https://linkedin.com/in/yourusername",
+      href: "www.linkedin.com/in/tasima-hapazari-6816041b8e",
       color: "hover:text-blue-400"
     },
     {
-      icon: Twitter,
-      label: "Twitter",
-      href: "https://twitter.com/yourusername",
+      icon: Instagram,
+      label: "Instagram",
+      href: "https://www.instagram.com/tasima_not_gonna_say_hapazari",
       color: "hover:text-blue-500"
     }
   ];
@@ -257,7 +258,7 @@ const Contact = () => {
                 
                 <div className="mt-6 p-4 bg-surface rounded-lg border border-border">
                   <p className="text-sm text-muted-foreground">
-                    <strong className="text-foreground">Available for:</strong> 
+                    <strong className="text-foreground">Available for: </strong> 
                     Internships, Part-time work, Freelance projects, and 
                     Collaboration opportunities
                   </p>

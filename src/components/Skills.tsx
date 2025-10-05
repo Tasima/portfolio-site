@@ -28,7 +28,7 @@ const Skills = () => {
       color: "text-secondary",
       skills: [
         "Node.js", "Python", "Java", "Express.js", "FastAPI", 
-        "RESTful APIs", "GraphQL", "Microservices"
+        "RESTful APIs", "GraphQL", "Microservices", "Ruby"
       ]
     },
     {
@@ -36,7 +36,7 @@ const Skills = () => {
       title: "Database & Storage",
       color: "text-accent", 
       skills: [
-        "PostgreSQL", "MongoDB", "MySQL", "Redis", "Supabase",
+        "PostgreSQL", "MongoDB", "MySQL", "Supabase",
         "Firebase", "Prisma ORM", "Database Design"
       ]
     },
@@ -55,7 +55,7 @@ const Skills = () => {
       color: "text-secondary",
       skills: [
         "React Native", "Flutter", "Progressive Web Apps",
-        "Mobile-First Design", "Cross-Platform Development"
+        "Mobile-First Design", "Cross-Platform Development", "Kotlin"
       ]
     },
     {
@@ -64,7 +64,7 @@ const Skills = () => {
       color: "text-accent",
       skills: [
         "Machine Learning", "Data Structures", "Algorithms",
-        "System Design", "Agile Methodology", "Problem Solving"
+        "System Design", "Agile Methodology", "Problem Solving", "Business Process Management", "Systems Analysis", "Business Process Analysis"
       ]
     }
   ];
@@ -122,8 +122,8 @@ const Skills = () => {
           
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {[
-              { skill: "Frontend Development", level: 90 },
-              { skill: "Backend Development", level: 85 },
+              { skill: "Frontend Development", level: 60 },
+              { skill: "Backend Development", level: 75 },
               { skill: "Database Design", level: 80 },
               { skill: "System Architecture", level: 75 },
               { skill: "DevOps & Deployment", level: 70 },

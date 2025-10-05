@@ -24,7 +24,7 @@ const Projects = () => {
       technologies: ["C#", ".NET", "Relational Database (SQL)", "UML"],
       category: "Backend",
       github: "https://github.com/Tasima/FormsOrderManagement",
-      live: "",
+      live: "https://github.com/Tasima/FormsOrderManagement",
       featured: false,
     },
     {
@@ -42,7 +42,7 @@ const Projects = () => {
       ],
       category: "Mobile",
       github: "https://github.com/Tasima/Nexa-Final",
-      live: "",
+      live: "https://github.com/Tasima/Nexa-Final",
       featured: false,
     },
     {
@@ -54,7 +54,7 @@ const Projects = () => {
       technologies: ["Java", "Threads/Executors", "JFreeChart"],
       category: "Backend",
       github: "https://github.com/Tasima/PCP_ParallelAssignment202",
-      live: "",
+      live: "https://github.com/Tasima/PCP_ParallelAssignment202",
       featured: false,
     },
     {
@@ -64,8 +64,8 @@ const Projects = () => {
       image: "/portfolio-screenshot.png",
       technologies: ["React", "TypeScript", "Tailwind", "Framer Motion"],
       category: "Frontend",
-      github: "https://github.com/yourusername/portfolio",
-      live: "https://yourportfolio.com",
+      github: "https://github.com/Tasima/portfolio-site",
+      live: "https://tasima-hapazari.vercel.app",
       featured: false,
     },
     {
@@ -76,7 +76,7 @@ const Projects = () => {
       technologies: ["Python", "asyncio", "bencode.py"],
       category: "Full Stack",
       github: "https://github.com/Tasima/bittorrent-client",
-      live: "",
+      live: "https://github.com/Tasima/bittorrent-client",
       featured: false,
     },
     {
@@ -88,7 +88,7 @@ const Projects = () => {
       technologies: ["Java", "java.util.concurrent", "BufferedImage"],
       category: "Concurrent & Scientific Computing",
       github: "https://github.com/Tasima/AbelianSampleSimulation",
-      live: "",
+      live: "https://github.com/Tasima/AbelianSampleSimulation",
       featured: false,
     },
   ];
@@ -254,7 +254,7 @@ const Projects = () => {
             className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
           >
             <Github className="w-4 h-4 mr-2" />
-            View All Projects on GitHub
+            <a href="https://github.com/Tasima" target="_blank" rel="noopener noreferrer">View All Projects on GitHub</a>
           </Button>
         </div>
       </div>

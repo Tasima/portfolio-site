@@ -22,8 +22,8 @@ const Security = () => {
     {
       title: "Secure Messaging System",
       description: "Implemented end-to-end encryption using Libsodium for a decentralized P2P messaging app.",
-      technologies: ["Libsodium", "React", "Node.js", "WebRTC"],
-      securityFeatures: ["E2E Encryption", "Perfect Forward Secrecy", "Zero-knowledge Architecture"],
+      technologies: ["Libsodium", "Kotlin", "NearbyConnections API", "ZXing QR library"],
+      securityFeatures: ["E2E Encryption", "Perfect Forward Secrecy", "Zero-knowledge Architecture", "Automatic Peer Discovery", "Delay-Tolerant Networking"],
       status: "Completed",
       icon: Lock
     },
@@ -48,7 +48,7 @@ const Security = () => {
       description: "Developed JWT-based authentication with bcrypt password hashing and multi-factor authentication.",
       technologies: ["JWT", "bcrypt", "Node.js", "Redis"],
       securityFeatures: ["Password Hashing", "Session Management", "2FA Integration"],
-      status: "Completed",
+      status: "In Development",
       icon: Key
     }
   ];
@@ -57,17 +57,27 @@ const Security = () => {
     {
       category: "Certifications",
       items: [
-        { name: "Google Cybersecurity Certificate", status: "In Progress", date: "Expected: Q2 2024" },
-        { name: "CompTIA Security+", status: "Planned", date: "Q3 2024" },
-        { name: "TryHackMe Paths", status: "Active", date: "Ongoing" }
+        { name: "Google Cybersecurity Certificate", status: "In Progress", date: "Expected: March 2026" },
+        { name: "CompTIA Security+", status: "Planned", date: "2026" },
+        { name: "ESEFA ES Fundamentails for Business", status: "Planned" , date: "21/10/2025"},
+        { name: "SAP Certified Associate - Implementation Consultant", status: "Planned", date: "December 2025"}
       ]
     },
     {
       category: "Courses & Training",
       items: [
-        { name: "OWASP Top 10 Deep Dive", status: "Completed", date: "2024" },
-        { name: "Ethical Hacking Fundamentals", status: "In Progress", date: "2024" },
-        { name: "Secure Code Review", status: "Planned", date: "Q2 2024" }
+        { name: "OWASP Top 10 Deep Dive", status: "In Progress", date: "2026" },
+        { name: "Junior Security Analyst", status: "Planned", date: "Dec 2025" },
+        { name: "TryHackMe Paths", status: "In Progress", date: "Ongoing" },
+
+        { name:"Intro to OffSec", status:"Completed", date:"2024"},
+        { name: "Web Application Security", status: "Completed", date: "2024" },
+        { name: "Operating System Security", status: "Completed", date: "2024"},
+        { name: "Pentesting Fundamentals", status:"Completed", date:"2024"},
+        { name: "Network Security", status: "Completed", date: "2024"},
+        { name:"Wireshark Fundamentals", status:"Completed", date:"2024"}
+        
+      
       ]
     },
     {
@@ -75,27 +85,30 @@ const Security = () => {
       items: [
         { name: "CTF Competitions", status: "Active", date: "Monthly" },
         { name: "HackTheBox Labs", status: "Active", date: "Weekly" },
+        { name: "TryHackMe Rooms" , status:"Active", date:"Weekly"},
         { name: "Bug Bounty Programs", status: "Learning", date: "2024" }
       ]
     }
   ];
 
   const securitySkills = [
-    { name: "Web Application Security", level: 75, icon: Shield },
-    { name: "Cryptography", level: 70, icon: Lock },
+    { name: "Web Application Security", level: 55, icon: Shield },
+    { name: "Cryptography", level: 60, icon: Lock },
     { name: "Penetration Testing", level: 60, icon: Target },
     { name: "Secure Code Review", level: 80, icon: Eye },
-    { name: "Network Security", level: 65, icon: Network },
+    { name: "Network Security", level: 85, icon: Network },
     { name: "Incident Response", level: 55, icon: Zap }
   ];
 
   const resources = [
-    { title: "The Web Application Hacker's Handbook", type: "Book", url: "#" },
-    { title: "OWASP Testing Guide", type: "Documentation", url: "#" },
-    { title: "Burp Suite", type: "Tool", url: "#" },
-    { title: "Kali Linux", type: "Platform", url: "#" },
-    { title: "CyberChef", type: "Tool", url: "#" },
-    { title: "Wireshark", type: "Tool", url: "#" }
+    { title: "The Web Application Hacker's Handbook", type: "Book", url: "https://edu.anarcho-copy.org/Against%20Security%20-%20Self%20Security/Dafydd%20Stuttard,%20Marcus%20Pinto%20-%20The%20web%20application%20hacker's%20handbook_%20finding%20and%20exploiting%20security%20flaws-Wiley%20(2011).pdf" },
+    { title: "OWASP Testing Guide", type: "Documentation", url: "https://owasp.org/www-project-web-security-testing-guide/v42/" },
+    { title: "Burp Suite", type: "Tool", url: "https://portswigger.net/burp/documentation/contents" },
+    { title: "Kali Linux", type: "Platform", url: "https://www.kali.org/docs/" },
+    { title: "CyberChef", type: "Tool", url: "https://gchq.github.io/CyberChef/" },
+    { title: "Wireshark", type: "Tool", url: "https://www.wireshark.org/docs/" },
+    { title: "Nmap", type: "Tool", url: "https://nmap.org/docs.html" },
+
   ];
 
   return (
@@ -301,11 +314,12 @@ const Security = () => {
                       </div>
                       <div>
                         <span className="font-medium text-sm">TryHackMe</span>
-                        <p className="text-xs text-muted-foreground">Top 15% globally</p>
+                        <p className="text-xs text-muted-foreground">Bronze League</p>
+                        <p className="text-xs text-muted-foreground">Globally Ranked</p>
                       </div>
                     </div>
                     <Badge variant="outline" className="text-xs border-green-400 text-green-400">
-                      Rank 85
+                      Rank 271258
                     </Badge>
                   </div>
                   
@@ -331,11 +345,11 @@ const Security = () => {
                       </div>
                       <div>
                         <span className="font-medium text-sm">HackerRank</span>
-                        <p className="text-xs text-muted-foreground">Security domain</p>
+                        <p className="text-xs text-muted-foreground">Software Engineer Role</p>
                       </div>
                     </div>
                     <Badge variant="outline" className="text-xs border-orange-400 text-orange-400">
-                      5 Star
+                      Active
                     </Badge>
                   </div>
                 </div>
@@ -347,7 +361,7 @@ const Security = () => {
               <CardHeader>
                 <CardTitle className="text-lg flex items-center">
                   <Shield className="w-5 h-5 mr-3 text-primary" />
-                  Portfolio Security Scan
+                  Portfolio Page Security Scan
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -396,21 +410,21 @@ const Security = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="text-center mb-4">
-                  <div className="text-3xl font-bold gradient-text mb-1">72%</div>
+                  <div className="text-3xl font-bold gradient-text mb-1">67%</div>
                   <p className="text-sm text-muted-foreground">Goals Completed</p>
                 </div>
                 
                 <div className="w-full bg-muted rounded-full h-3 overflow-hidden mb-4">
                   <div 
                     className="h-3 bg-gradient-to-r from-primary to-primary-glow rounded-full transition-all duration-1000 ease-out"
-                    style={{ width: '72%' }}
+                    style={{ width: '67%' }}
                   ></div>
                 </div>
                 
                 <div className="space-y-3 text-sm">
                   <div className="flex items-center justify-between">
                     <span>Certifications</span>
-                    <span className="text-primary font-mono">2/3</span>
+                    <span className="text-primary font-mono">0/4</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span>Security Projects</span>
@@ -420,9 +434,13 @@ const Security = () => {
                     <span>CTF Challenges</span>
                     <span className="text-primary font-mono">24/30</span>
                   </div>
+                    <div className="flex items-center justify-between">
+                    <span>Personal Projects</span>
+                    <span className="text-primary font-mono">4/10</span>
+                  </div>
                   <div className="flex items-center justify-between">
                     <span>Vulnerability Reports</span>
-                    <span className="text-primary font-mono">8/10</span>
+                    <span className="text-primary font-mono">3</span>
                   </div>
                 </div>
                 
@@ -447,7 +465,7 @@ const Security = () => {
             <CardContent className="p-8">
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h4 className="font-semibold mb-4 text-lg">Short-term Goals (2024)</h4>
+                  <h4 className="font-semibold mb-4 text-lg">Short-term Goals (2026)</h4>
                   <ul className="space-y-2 text-left">
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 mr-3 text-primary" />
@@ -485,7 +503,7 @@ const Security = () => {
                     </li>
                     <li className="flex items-center">
                       <Target className="w-4 h-4 mr-3 text-primary" />
-                      Contribute to cybersecurity education
+                      Participate in Bug Bounty Programs
                     </li>
                   </ul>
                 </div>
@@ -493,8 +511,8 @@ const Security = () => {
               
               <div className="mt-8 pt-6 border-t border-border">
                 <p className="text-muted-foreground italic">
-                  "Security is not a product, but a process. I'm committed to making that process 
-                  more accessible, understandable, and effective for developers everywhere."
+                 "The only truly secure system is one that is powered off, cast in a block of concrete and sealed in a lead-lined room with armed guards, and even then I have my doubts."
+- Gene Spafford
                 </p>
               </div>
             </CardContent>

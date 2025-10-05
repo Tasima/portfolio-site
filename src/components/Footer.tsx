@@ -17,10 +17,10 @@ const Footer = () => {
           
           <div className="text-center md:text-right">
             <p className="text-sm text-muted-foreground">
-              © {currentYear} Your Name. All rights reserved.
+              © {currentYear} TASIMA HAPAZARI. All rights reserved.
             </p>
             <p className="text-xs text-muted-foreground mt-1">
-              Designed & Developed with modern web technologies
+              Designed & Developed by yours truly
             </p>
           </div>
         </div>
