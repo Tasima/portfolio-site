@@ -4,7 +4,7 @@ import { Github, Linkedin, Mail, Download } from "lucide-react";
 
 const Hero = () => {
   const [displayText, setDisplayText] = useState("");
-  const fullText = "Full-Stack Engineer + Business & Security Analyst"
+  const fullText = "Aspiring full stack engineer, Android developer and Security enthusiast."
   useEffect(() => {
     let i = 0;
     const timer = setInterval(() => {
@@ -46,7 +46,7 @@ const Hero = () => {
           </h1>
           
           <div className="text-2xl md:text-4xl mb-8 font-mono">
-            <span className="text-muted-foreground">A </span>
+            <span className="text-muted-foreground">An </span>
             <span className="text-primary">{displayText}</span>
             <span className="terminal-cursor text-primary">|</span>
           </div>
