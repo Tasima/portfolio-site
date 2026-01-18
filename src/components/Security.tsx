@@ -65,12 +65,12 @@ const Security = () => {
     {
       category: "Courses & Training",
       items: [
-        { name:"Intro to OffSec", status:"Completed", date:"2024"},
-        { name: "Web Application Security", status: "Completed", date: "2024" },
-        { name: "Operating System Security", status: "Completed", date: "2024"},
-        { name: "Pentesting Fundamentals", status:"Completed", date:"2024"},
-        { name: "Network Security", status: "Completed", date: "2024"},
-        { name:"Wireshark Fundamentals", status:"Completed", date:"2024"},
+        { name: "Computer Networking" , status: "Awaiting UCT exam results", date: "Jan 2026"},
+        { name: "Operating Systems" , status: "Awaiting UCT exam results", date: "Jan 2026"},
+        { name: "Project Management" , status: "Awaiting UCT exam results", date: "Jan 2026"},
+        { name: "Advanced Software Design" , status: "Awaiting UCT exam results", date: "Jan 2026"},
+        { name: "E-commerce" , status: "Awaiting UCT exam results", date: "Jan 2026"},
+        { name: "Theory of Algorithms and Computation" , status: "Awaiting UCT exam results", date: "Jan 2026"},
         { name: "JavaScript Zero to Expert Udemy Course", status: "Learning", date: "2026"},
         { name: "Implementing SAP S/4HANA Cloud Private Edition" , status: "Learning", date: "2026"},
 
