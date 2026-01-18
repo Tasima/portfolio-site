@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { 
@@ -57,27 +58,23 @@ const Security = () => {
     {
       category: "Certifications",
       items: [
-        { name: "Google Cybersecurity Certificate", status: "In Progress", date: "Expected: March 2026" },
-        { name: "CompTIA Security+", status: "Planned", date: "2026" },
-        { name: "ESEFA ES Fundamentails for Business", status: "Planned" , date: "21/10/2025"},
-        { name: "SAP Certified Associate - Implementation Consultant", status: "Planned", date: "December 2025"}
+        { name: "ESEFA ES Fundamentals for Business", status: "Completed" , date: "22/10/2025"},
+        { name: "SAP Certified Associate - Implementation Consultant", status: "In Progress", date: "February 2026"}
       ]
     },
     {
       category: "Courses & Training",
       items: [
-        { name: "OWASP Top 10 Deep Dive", status: "In Progress", date: "2026" },
-        { name: "Junior Security Analyst", status: "Planned", date: "Dec 2025" },
-        { name: "TryHackMe Paths", status: "In Progress", date: "Ongoing" },
-
         { name:"Intro to OffSec", status:"Completed", date:"2024"},
         { name: "Web Application Security", status: "Completed", date: "2024" },
         { name: "Operating System Security", status: "Completed", date: "2024"},
         { name: "Pentesting Fundamentals", status:"Completed", date:"2024"},
         { name: "Network Security", status: "Completed", date: "2024"},
-        { name:"Wireshark Fundamentals", status:"Completed", date:"2024"}
-        
-      
+        { name:"Wireshark Fundamentals", status:"Completed", date:"2024"},
+        { name: "JavaScript Zero to Expert Udemy Course", status: "Learning", date: "2026"},
+        { name: "Implementing SAP S/4HANA Cloud Private Edition" , status: "Learning", date: "2026"},
+
+
       ]
     },
     {

@@ -4,7 +4,7 @@ import { Github, Linkedin, Mail, Download } from "lucide-react";
 
 const Hero = () => {
   const [displayText, setDisplayText] = useState("");
-  const fullText = "Software Engineer + Business & Security Analyst"
+  const fullText = "Full-Stack Engineer + Business & Security Analyst"
   useEffect(() => {
     let i = 0;
     const timer = setInterval(() => {
@@ -52,8 +52,7 @@ const Hero = () => {
           </div>
           
           <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-              Which basically means I spend my days designing and building software, and nights bashing them with a crowbar. It's a bit of a dark hobby, but it's what I do best. Take a peek at this vicious cycle.
-            
+            I'm a final year CS student graduating in May 2026 but receiving my proof of qualification after the release of January exam results.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
