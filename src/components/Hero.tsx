@@ -4,7 +4,7 @@ import { Github, Linkedin, Mail, Download } from "lucide-react";
 
 const Hero = () => {
   const [displayText, setDisplayText] = useState("");
-  const fullText = "Aspiring full stack engineer, Android developer and Security enthusiast."
+  const fullText = "full stack engineer, android developer and security enthusiast."
   useEffect(() => {
     let i = 0;
     const timer = setInterval(() => {
@@ -46,7 +46,7 @@ const Hero = () => {
           </h1>
           
           <div className="text-2xl md:text-4xl mb-8 font-mono">
-            <span className="text-muted-foreground">An </span>
+            <span className="text-muted-foreground">Aspiring </span>
             <span className="text-primary">{displayText}</span>
             <span className="terminal-cursor text-primary">|</span>
           </div>
@@ -76,7 +76,7 @@ const Hero = () => {
           
           <div className="flex justify-center space-x-6">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/Tasima"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:glow-effect rounded-full p-2"
@@ -84,7 +84,7 @@ const Hero = () => {
               <Github className="w-6 h-6" />
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/tasima-hapazari-6816041b8/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:glow-effect rounded-full p-2"
@@ -92,12 +92,12 @@ const Hero = () => {
               <Linkedin className="w-6 h-6" />
             </a>
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:tasimahapaz@gmail.com"
               className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:glow-effect rounded-full p-2"
             >
               <Mail className="w-6 h-6" />
             </a>
-            <a href="/Resume.pdf" download="Tasima_Hapazari_Resume.pdf">
+            <a href="/CV.docx" download="Tasima_Hapazari_Resume.pdf">
               <Button
                 variant="ghost"
                 size="sm"

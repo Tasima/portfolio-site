@@ -28,7 +28,7 @@ const Skills = () => {
       color: "text-secondary",
       skills: [
         "Node.js", "Python", "Java", "Express.js", "FastAPI", 
-        "RESTful APIs", "GraphQL", "Microservices", "Ruby"
+        "RESTful APIs", "GraphQL", "Microservices", "Ruby", "Spring Boot"
       ]
     },
     {
@@ -37,7 +37,7 @@ const Skills = () => {
       color: "text-accent", 
       skills: [
         "PostgreSQL", "MongoDB", "MySQL", "Supabase",
-        "Firebase", "Prisma ORM", "Database Design"
+        "Firebase", "Prisma ORM", "Database Design", "JPA"
       ]
     },
     {
@@ -46,7 +46,7 @@ const Skills = () => {
       color: "text-primary-glow",
       skills: [
         "Git", "Docker", "AWS", "Vercel", "Linux", "CI/CD",
-        "GitHub Actions", "Testing (Jest, Cypress)"
+        "GitHub Actions", "Testing (Jest, Cypress)", "GitLab", "Kubernetes"
       ]
     },
     {
@@ -54,8 +54,8 @@ const Skills = () => {
       title: "Mobile Development",
       color: "text-secondary",
       skills: [
-        "React Native", "Flutter", "Progressive Web Apps",
-        "Mobile-First Design", "Cross-Platform Development", "Kotlin"
+        "Flutter", "Progressive Web Apps",
+        "Mobile-First Design", "Cross-Platform Development", "Kotlin", "RoomDB", "Low level networking"
       ]
     },
     {
@@ -64,7 +64,9 @@ const Skills = () => {
       color: "text-accent",
       skills: [
         "Machine Learning", "Data Structures", "Algorithms",
-        "System Design", "Agile Methodology", "Problem Solving", "Business Process Management", "Systems Analysis", "Business Process Analysis"
+        "System Design", "Agile Methodology", "Problem Solving", "Business Process Management", 
+        "Systems Analysis", "Business Process Analysis", "SAP Cloud ERP (Private Edition)", "Tableau"
+
       ]
     }
   ];
@@ -122,12 +124,12 @@ const Skills = () => {
           
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {[
-              { skill: "Frontend Development", level: 60 },
-              { skill: "Backend Development", level: 75 },
+              { skill: "Frontend Development", level: 50 },
+              { skill: "Backend Development", level: 65 },
               { skill: "Database Design", level: 80 },
               { skill: "System Architecture", level: 75 },
-              { skill: "DevOps & Deployment", level: 70 },
-              { skill: "Mobile Development", level: 65 }
+              { skill: "DevOps & Deployment", level: 55 },
+              { skill: "Mobile Development", level: 70 }
             ].map((item, index) => (
               <div key={index} className="space-y-2">
                 <div className="flex justify-between items-center">

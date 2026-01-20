@@ -12,7 +12,6 @@ import {
   Send, 
   Github, 
   Linkedin, 
-  Twitter,
   MessageCircle,
   Instagram
 } from "lucide-react";
@@ -89,6 +88,7 @@ const Contact = () => {
 
     try {
       // Simulate sending email - in production, this would call an API
+      //TODO: call emil sending API
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       toast({
@@ -125,7 +125,7 @@ const Contact = () => {
       icon: Phone,
       label: "Phone",
       value: "+27 67 589 0416",
-      href: "tel:+15551234567"
+      href: "tel:+27675890416"
     },
     {
       icon: MapPin,
@@ -145,7 +145,7 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: "LinkedIn", 
-      href: "https://www.linkedin.com/in/tasima-hapazari-6816041b8e",
+      href: "https://www.linkedin.com/in/tasima-hapazari-6816041b8",
       color: "hover:text-blue-400"
     },
     {
@@ -321,7 +321,7 @@ const Contact = () => {
                 <div className="mt-6 p-4 bg-surface rounded-lg border border-border">
                   <p className="text-sm text-muted-foreground">
                     <strong className="text-foreground">Available for: </strong> 
-                    Internships, Part-time work, Freelance projects, and 
+                    Internships, Part-time work, Full-time work, Freelance projects, and
                     Collaboration opportunities
                   </p>
                 </div>

@@ -17,7 +17,7 @@ const Footer = () => {
           
           <div className="text-center md:text-right">
             <p className="text-sm text-muted-foreground">
-              © {currentYear} TASIMA HAPAZARI. All rights reserved.
+              © {currentYear} All Rights Reserved.
             </p>
             <p className="text-xs text-muted-foreground mt-1">
               Designed & Developed by yours truly

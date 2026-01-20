@@ -358,7 +358,7 @@ const Security = () => {
               <CardHeader>
                 <CardTitle className="text-lg flex items-center">
                   <Shield className="w-5 h-5 mr-3 text-primary" />
-                  Portfolio Security Scan
+                  Portfolio Site Security Eval
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -478,7 +478,7 @@ const Security = () => {
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 mr-3 text-primary" />
-                      Contribute to open-source security tools
+                      Write SAP E_S4CPE certification exam (planned for February 2026)
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 mr-3 text-primary" />
@@ -486,7 +486,7 @@ const Security = () => {
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 mr-3 text-primary" />
-                      Build a comprehensive vulnerability scanner
+                      Continue with web3 mobile application
                     </li>
                   </ul>
                 </div>
@@ -496,7 +496,7 @@ const Security = () => {
                   <ul className="space-y-2 text-left">
                     <li className="flex items-center">
                       <Target className="w-4 h-4 mr-3 text-primary" />
-                      Pursue penetration testing roles
+                      Pursue software engineering roles
                     </li>
                     <li className="flex items-center">
                       <Target className="w-4 h-4 mr-3 text-primary" />
@@ -509,6 +509,10 @@ const Security = () => {
                     <li className="flex items-center">
                       <Target className="w-4 h-4 mr-3 text-primary" />
                       Participate in Bug Bounty Programs
+                    </li>
+                    <li className="flex items-center">
+                      <Target className="w-4 h-4 mr-3 text-primary" />
+                      Pursue roles within the SAP ecosystem
                     </li>
                   </ul>
                 </div>
