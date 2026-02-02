@@ -69,17 +69,6 @@ const Projects = () => {
       featured: false,
     },
     {
-      title: "Custom BitTorrent Client",
-      description:
-        "A peer-to-peer file sharing implementation in Python, handling torrent files, peer discovery, piece downloading, and uploading.",
-      image: "/bittorrent-screenshot.png",
-      technologies: ["Python", "asyncio", "bencode.py"],
-      category: "Full Stack",
-      github: "https://github.com/Tasima/bittorrent-client",
-      live: "https://github.com/Tasima/bittorrent-client",
-      featured: false,
-    },
-    {
       title: "Parallel Abelian Sandpile Simulator",
       description:
         "Java-based simulator for the Abelian sandpile model using concurrent programming to generate fractal patterns and visualizations.",
