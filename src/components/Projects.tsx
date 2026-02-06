@@ -49,7 +49,7 @@ const Projects = () => {
     {
       title: "CPU Scheduling Simulator",
       description:
-        "This project involves extending a concurrent Java-based simulation to evaluate and compare three CPU scheduling algorithms: FCFS, SJF, and Round Robin.By automating experiments with shell scripts and analyzing performance metrics, the project assesses trade-offs in fairness, predictability, and starvation to recommend an optimal scheduling strategy.",
+        "This project involves extending a concurrent Java-based simulation to evaluate and compare three CPU scheduling algorithms: FCFS, SJF, and Round Robin. By automating experiments with shell scripts and analyzing performance metrics, the project assesses trade-offs in fairness, predictability, and starvation to recommend an optimal scheduling strategy.",
       image:
         "https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/images/Chapter5/5_02_CPU_Histogram.jpg",
       technologies: ["Java", "Threads", "Matplotlib"],
@@ -91,7 +91,7 @@ const Projects = () => {
       image:
         "https://ista.ac.at/wp-content/uploads/2019/04/unnamed-file-352.jpeg",
       technologies: ["Java", "java.util.concurrent", "BufferedImage"],
-      category: "Concurrent & Scientific Computing",
+      category: "Coursework",
       deployment: "dev",
       github: "https://github.com/Tasima/AbelianSampleSimulation",
       featured: false,

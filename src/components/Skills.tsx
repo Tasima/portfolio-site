@@ -74,7 +74,7 @@ const Skills = () => {
       title: "Frameworks",
       color: "text-primary-glow",
       skills: [
-        "React", "Svelte", "SvelteKit", "Rails", "Spring Boot", "Django"
+        "React", "Svelte", "SvelteKit", "Rails", "Spring Boot"
       ]
     }
 

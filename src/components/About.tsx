@@ -1,6 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Code, Lightbulb, Rocket, Users } from "lucide-react";
-import GlitchText from "../../@/components/GlitchText";
 
 const About = () => {
   const highlights = [
