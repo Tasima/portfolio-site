@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
+
 import { 
   Mail, 
   MapPin, 
@@ -34,6 +35,11 @@ const contactFormSchema = z.object({
     .min(1, "Message is required")
     .max(5000, "Message must be less than 5000 characters")
 });
+
+const CONTACT_EMAIL = "tasimahapaz@gmail.com";
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const Contact = () => {
   const { toast } = useToast();
@@ -87,9 +93,42 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Simulate sending email - in production, this would call an API
-      //TODO: call emil sending API
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const isEmailJsConfigured =
+        Boolean(EMAILJS_SERVICE_ID) &&
+        Boolean(EMAILJS_TEMPLATE_ID) &&
+        Boolean(EMAILJS_PUBLIC_KEY);
+
+      const openMailClient = () => {
+        const subject = encodeURIComponent(formData.subject);
+        const body = encodeURIComponent(
+          `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+        );
+        window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+      };
+
+      if (isEmailJsConfigured) {
+        await emailjs.send(
+          EMAILJS_SERVICE_ID as string,
+          EMAILJS_TEMPLATE_ID as string,
+          {
+            from_name: formData.name,
+            from_email: formData.email,
+            subject: formData.subject,
+            message: formData.message,
+            to_email: CONTACT_EMAIL,
+            reply_to: formData.email,
+          },
+          EMAILJS_PUBLIC_KEY as string
+        );
+      } else {
+        openMailClient();
+        toast({
+          title: "Opening Email Client",
+          description:
+            "Email service is not configured. Your email client will open with a prefilled message.",
+        });
+        return;
+      }
       
       toast({
         title: "Message Sent!",
@@ -102,24 +141,30 @@ const Contact = () => {
         subject: "",
         message: ""
       });
-    } catch (error: any) {
-      console.error("Error sending message:", error);
-      toast({
-        title: "Error",
-        description: error.message || "Failed to send message. Please try again.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+  } catch (error: any) {
+    console.error("Error sending message:", error);
+    const subject = encodeURIComponent(formData.subject);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+    );
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+    toast({
+      title: "Email Service Unavailable",
+      description:
+        "We couldn't send via Gmail right now. Your email client should open so you can send it directly.",
+      variant: "default",
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
   };
 
   const contactInfo = [
     {
       icon: Mail,
       label: "Email",
-      value: "tasimahapaz@gmail.com",
-      href: "mailto:tasimahapaz@gmail.com"
+      value: CONTACT_EMAIL,
+      href: `mailto:${CONTACT_EMAIL}`
     },
     {
       icon: Phone,

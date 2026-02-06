@@ -4,7 +4,7 @@ import { Github, Linkedin, Mail, Download } from "lucide-react";
 
 const Hero = () => {
   const [displayText, setDisplayText] = useState("");
-  const fullText = "full stack engineer, android developer and security enthusiast."
+  const fullText = "full-stack web developer, mobile developer and security specialist."
   useEffect(() => {
     let i = 0;
     const timer = setInterval(() => {
@@ -52,7 +52,10 @@ const Hero = () => {
           </div>
           
           <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-            I'm a final year CS student graduating in May 2026 but receiving my proof of qualification after the release of January exam results.
+            I'm a recent graduate from the University of Cape Town with a BSc in Computer Science and Business Computing.
+            I'm about to write my SAP E_4SCPE certification and I'm pursuing an eventual OSCP certification.
+
+            
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -91,13 +94,8 @@ const Hero = () => {
             >
               <Linkedin className="w-6 h-6" />
             </a>
-            <a
-              href="mailto:tasimahapaz@gmail.com"
-              className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:glow-effect rounded-full p-2"
-            >
-              <Mail className="w-6 h-6" />
-            </a>
-            <a href="/CV.docx" download="Tasima_Hapazari_Resume.pdf">
+          
+            <a href="/CV.pdf" download="Tasima_Hapazari_Resume.pdf">
               <Button
                 variant="ghost"
                 size="sm"

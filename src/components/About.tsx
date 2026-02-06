@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Code, Lightbulb, Rocket, Users } from "lucide-react";
+import GlitchText from "../../@/components/GlitchText";
 
 const About = () => {
   const highlights = [
@@ -29,13 +30,11 @@ const About = () => {
     <section id="about" className="py-20 bg-surface">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
+
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             About <span className="gradient-text">Me</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            I'm a final year Computer Science student with a passion for creating 
-            innovative digital experiences through code.
-          </p>
+          
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -59,7 +58,7 @@ const About = () => {
               <h3 className="text-xl font-semibold mb-4 text-primary">Quick Stats</h3>
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center p-4 bg-gradient-card rounded-lg border border-border">
-                  <div className="text-2xl font-bold text-primary">7+</div>
+                  <div className="text-2xl font-bold text-primary">10+</div>
                   <div className="text-sm text-muted-foreground">Projects Completed</div>
                 </div>
                 <div className="text-center p-4 bg-gradient-card rounded-lg border border-border">

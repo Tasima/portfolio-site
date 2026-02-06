@@ -10,9 +10,9 @@ const Footer = () => {
           <div className="flex items-center space-x-2 mb-4 md:mb-0">
             <Code className="w-5 h-5 text-primary" />
             <span className="font-mono text-sm">
-              Built with <Heart className="w-4 h-4 text-red-500 inline mx-1" /> and 
-              <span className="text-primary ml-1">TypeScript</span>
-            </span>
+              Developer by trade. </span>
+              <span className="text-primary ml-1">Adversary by mindset.</span>
+          
           </div>
           
           <div className="text-center md:text-right">

@@ -6,7 +6,7 @@ import {
   Globe, 
   Smartphone, 
   GitBranch, 
-  Palette,
+  ChefHat,
   Server,
   Brain
 } from "lucide-react";
@@ -37,7 +37,7 @@ const Skills = () => {
       color: "text-accent", 
       skills: [
         "PostgreSQL", "MongoDB", "MySQL", "Supabase",
-        "Firebase", "Prisma ORM", "Database Design", "JPA"
+        "Firebase", "Database Design", "JPA"
       ]
     },
     {
@@ -68,7 +68,18 @@ const Skills = () => {
         "Systems Analysis", "Business Process Analysis", "SAP Cloud ERP (Private Edition)", "Tableau"
 
       ]
+    },
+    {
+      icon: ChefHat,
+      title: "Frameworks",
+      color: "text-primary-glow",
+      skills: [
+        "React", "Svelte", "SvelteKit", "Rails", "Spring Boot", "Django"
+      ]
     }
+
+    
+    
   ];
 
   return (

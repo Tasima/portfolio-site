@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 
 const Security = () => {
+
   const securityProjects = [
     {
       title: "Secure Messaging System",
@@ -29,28 +30,24 @@ const Security = () => {
       icon: Lock
     },
     {
-      title: "Mobile App Security Analysis",
-      description: "Conducted static analysis using MobSF to identify vulnerabilities in Android applications.",
-      technologies: ["MobSF", "Android", "Python", "OWASP"],
-      securityFeatures: ["Static Analysis", "Debug Certificate Detection", "SQL Injection Prevention"],
-      status: "Ongoing",
-      icon: Smartphone
-    },
-    {
-      title: "Vulnerability Scanner",
-      description: "Built a web application scanner that checks for common OWASP Top 10 vulnerabilities.",
-      technologies: ["Python", "BeautifulSoup", "Requests", "SQLAlchemy"],
-      securityFeatures: ["XSS Detection", "SQL Injection Testing", "CSRF Protection"],
-      status: "In Development",
+      
+    "title": "Cybersecurity Home Lab",
+    "description": "A self-hosted cybersecurity home lab designed for hands-on penetration testing and reverse engineering practice. The lab is built using VirtualBox with strict network isolation to safely simulate real-world attack and defense scenarios. It includes an attacker environment for exploitation workflows and multiple intentionally vulnerable machines for controlled testing and analysis.",
+    "technologies": [
+      "VirtualBox",
+      "Kali Linux",
+      "Metasploit",
+      "Remnux",
+      "Linux"
+    ],
+    "securityFeatures": [
+      "Isolated virtual networks to prevent host and external exposure",
+      "Controlled vulnerable machines for safe exploitation practice",
+      "Separation of attacker and target environments",
+      "Offline malware and reverse engineering environment"
+    ],
+    "status": "Ongoing",
       icon: Bug
-    },
-    {
-      title: "Secure Authentication System",
-      description: "Developed JWT-based authentication with bcrypt password hashing and multi-factor authentication.",
-      technologies: ["JWT", "bcrypt", "Node.js", "Redis"],
-      securityFeatures: ["Password Hashing", "Session Management", "2FA Integration"],
-      status: "In Development",
-      icon: Key
     }
   ];
 
@@ -59,31 +56,22 @@ const Security = () => {
       category: "Certifications",
       items: [
         { name: "ESEFA ES Fundamentals for Business", status: "Completed" , date: "22/10/2025"},
-        { name: "SAP Certified Associate - Implementation Consultant", status: "In Progress", date: "February 2026"}
+        { name: "SAP E_4SCPE", status: "Active", date: "February 2026"}
       ]
     },
     {
       category: "Courses & Training",
       items: [
-        { name: "Computer Networking" , status: "Awaiting UCT exam results", date: "Jan 2026"},
-        { name: "Operating Systems" , status: "Awaiting UCT exam results", date: "Jan 2026"},
-        { name: "Project Management" , status: "Awaiting UCT exam results", date: "Jan 2026"},
-        { name: "Advanced Software Design" , status: "Awaiting UCT exam results", date: "Jan 2026"},
-        { name: "E-commerce" , status: "Awaiting UCT exam results", date: "Jan 2026"},
-        { name: "Theory of Algorithms and Computation" , status: "Awaiting UCT exam results", date: "Jan 2026"},
-        { name: "JavaScript Zero to Expert Udemy Course", status: "Learning", date: "2026"},
-        { name: "Implementing SAP S/4HANA Cloud Private Edition" , status: "Learning", date: "2026"},
-
-
+        { name: "Cisco Networking Academy: Ethical Hacker" , status: "Active", date: "Present"},
+        { name: "Implementing SAP S/4HANA Cloud Private Edition" , status: "Completed", date: "Jan 2026"},
       ]
     },
     {
       category: "Practical Experience",
       items: [
-        { name: "CTF Competitions", status: "Active", date: "Monthly" },
-        { name: "HackTheBox Labs", status: "Active", date: "Weekly" },
-        { name: "TryHackMe Rooms" , status:"Active", date:"Weekly"},
-        { name: "Bug Bounty Programs", status: "Learning", date: "2024" }
+        { name: "CTF Competitions", status: "Learning", date: "Monthly" },
+        { name: "HackTheBox Labs", status: "Learning", date: "Weekly" },
+        { name: "TryHackMe Rooms" , status:"Learning", date:"Weekly"},
       ]
     }
   ];
@@ -94,7 +82,7 @@ const Security = () => {
     { name: "Penetration Testing", level: 60, icon: Target },
     { name: "Secure Code Review", level: 80, icon: Eye },
     { name: "Network Security", level: 85, icon: Network },
-    { name: "Incident Response", level: 55, icon: Zap }
+    { name: "DFIR", level: 55, icon: Zap }
   ];
 
   const resources = [
@@ -258,33 +246,7 @@ const Security = () => {
         </div>
 
         {/* Resources & Tools */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold mb-8 flex items-center">
-            <AlertTriangle className="w-6 h-6 mr-3 text-primary" />
-            Security Arsenal
-          </h3>
-          
-          <Card className="bg-gradient-card border-border">
-            <CardContent className="p-6">
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {resources.map((resource, index) => (
-                  <div 
-                    key={index}
-                    className="flex items-center justify-between p-3 rounded-lg bg-background/50 hover:bg-background/70 transition-colors duration-300"
-                  >
-                    <div>
-                      <span className="font-medium">{resource.title}</span>
-                      <Badge variant="outline" className="ml-2 text-xs">
-                        {resource.type}
-                      </Badge>
-                    </div>
-                    <ExternalLink className="w-4 h-4 text-muted-foreground" />
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        </div>
+        
 
         {/* Metrics & Proof */}
         <div className="mb-16">
@@ -497,10 +459,6 @@ const Security = () => {
                     <li className="flex items-center">
                       <Target className="w-4 h-4 mr-3 text-primary" />
                       Pursue software engineering roles
-                    </li>
-                    <li className="flex items-center">
-                      <Target className="w-4 h-4 mr-3 text-primary" />
-                      Research secure software architectures
                     </li>
                     <li className="flex items-center">
                       <Target className="w-4 h-4 mr-3 text-primary" />

@@ -10,6 +10,7 @@ import {
   Smartphone,
   Globe,
   Filter,
+  LibraryBig
 } from "lucide-react";
 
 const Projects = () => {
@@ -22,9 +23,9 @@ const Projects = () => {
         "C# application for e-commerce order processing, including customer creation, inventory checks, picking lists, and expired products reports with UML designs.",
       image: "https://i.ytimg.com/vi/JMJ1elL6Hmg/sddefault.jpg",
       technologies: ["C#", ".NET", "Relational Database (SQL)", "UML"],
-      category: "Backend",
+      category: "Coursework",
+      deployment: "dev",
       github: "https://github.com/Tasima/FormsOrderManagement",
-      live: "https://github.com/Tasima/FormsOrderManagement",
       featured: false,
     },
     {
@@ -41,44 +42,48 @@ const Projects = () => {
         "Nearby Connections API",
       ],
       category: "Mobile",
+      deployment: "dev",
       github: "https://github.com/Tasima/Nexa-Final",
-      live: "https://github.com/Tasima/Nexa-Final",
       featured: false,
     },
     {
-      title: "Parallel Computing and CPU Scheduling Simulator",
+      title: "CPU Scheduling Simulator",
       description:
-        "Java experiments comparing sequential vs. parallel performance and simulating CPU scheduling algorithms with detailed reports and graphs.",
+        "This project involves extending a concurrent Java-based simulation to evaluate and compare three CPU scheduling algorithms: FCFS, SJF, and Round Robin.By automating experiments with shell scripts and analyzing performance metrics, the project assesses trade-offs in fairness, predictability, and starvation to recommend an optimal scheduling strategy.",
       image:
         "https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/images/Chapter5/5_02_CPU_Histogram.jpg",
-      technologies: ["Java", "Threads/Executors", "JFreeChart"],
-      category: "Backend",
-      github: "https://github.com/Tasima/PCP_ParallelAssignment202",
-      live: "https://github.com/Tasima/PCP_ParallelAssignment202",
+      technologies: ["Java", "Threads", "Matplotlib"],
+      category: "Coursework",
+      deployment: "dev",
+      github: "https://github.com/Tasima/OS1Redo",
       featured: false,
     },
     {
-      title: "Portfolio Website",
+      title: "Cuppa La Var",
       description:
-        "Modern, responsive portfolio website built with cutting-edge technologies and smooth animations.",
-      image: "/portfolio-screenshot.png",
+        "A landing page for a small cafe/coffee shop. Extended to add member signups, a member dashboard and a rewards system",
+      image: "/clv-site.png",
       technologies: ["React", "TypeScript", "Tailwind", "Framer Motion"],
-      category: "Frontend",
-      github: "https://github.com/Tasima/portfolio-site",
-      live: "https://tasima-hapazari.vercel.app",
-      featured: false,
-    },
-    {
-      title: "Custom BitTorrent Client",
-      description:
-        "A peer-to-peer file sharing implementation in Python, handling torrent files, peer discovery, piece downloading, and uploading.",
-      image: "/bittorrent-screenshot.png",
-      technologies: ["Python", "asyncio", "bencode.py"],
       category: "Full Stack",
-      github: "https://github.com/Tasima/bittorrent-client",
-      live: "https://github.com/Tasima/bittorrent-client",
+      deployment: "prod",
+      live: "https://www.cuppalavar.com/",
       featured: false,
     },
+    /*
+    {
+      //TODO add Thato site 
+      title: "",
+      description:
+        "",
+      technologies: [
+        
+      ],
+      category: "Front End",
+      deployment: "dev",
+      github: "",
+      featured: false,
+    },
+    */
     {
       title: "Parallel Abelian Sandpile Simulator",
       description:
@@ -87,13 +92,14 @@ const Projects = () => {
         "https://ista.ac.at/wp-content/uploads/2019/04/unnamed-file-352.jpeg",
       technologies: ["Java", "java.util.concurrent", "BufferedImage"],
       category: "Concurrent & Scientific Computing",
+      deployment: "dev",
       github: "https://github.com/Tasima/AbelianSampleSimulation",
-      live: "https://github.com/Tasima/AbelianSampleSimulation",
       featured: false,
     },
+
   ];
 
-  const categories = ["All", "Full Stack", "Frontend", "Backend", "Mobile"];
+  const categories = ["All", "Full Stack", "Frontend", "Mobile", "Coursework"];
 
   const filteredProjects =
     selectedFilter === "All"
@@ -103,13 +109,13 @@ const Projects = () => {
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case "Full Stack":
-        return Globe;
-      case "Frontend":
-        return Code;
-      case "Backend":
         return Database;
+      case "Frontend":
+        return Globe;
       case "Mobile":
         return Smartphone;
+      case "Coursework":
+        return LibraryBig;
       default:
         return Code;
     }
@@ -180,24 +186,28 @@ const Projects = () => {
                     {project.title}
                   </CardTitle>
                   <div className="flex space-x-2">
-                    <Button size="sm" variant="ghost" asChild>
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Github className="w-4 h-4" />
-                      </a>
-                    </Button>
-                    <Button size="sm" variant="ghost" asChild>
-                      <a
-                        href={project.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                      </a>
-                    </Button>
+                    {project.github && (
+                      <Button size="sm" variant="ghost" asChild>
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Github className="w-4 h-4" />
+                        </a>
+                      </Button>
+                    )}
+                    {project.live && (
+                      <Button size="sm" variant="ghost" asChild>
+                        <a
+                          href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                        </a>
+                      </Button>
+                    )}
                   </div>
                 </div>
               </CardHeader>
@@ -220,26 +230,29 @@ const Projects = () => {
                 </div>
 
                 <div className="pt-4 flex space-x-3">
-                  <Button asChild className="flex-1">
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Live Demo
-                    </a>
-                  </Button>
-                  <Button variant="outline" asChild>
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Github className="w-4 h-4 mr-2" />
-                      Code
-                    </a>
-                  </Button>
+                  {project.deployment === "prod" && project.live ? (
+                    <Button className="w-full" asChild>
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Live Demo
+                      </a>
+                    </Button>
+                  ) : (
+                    <Button className="w-full" variant="outline" asChild>
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Github className="w-4 h-4 mr-2" />
+                        Code
+                      </a>
+                    </Button>
+                  )}
                 </div>
               </CardContent>
             </Card>
