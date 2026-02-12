@@ -39,18 +39,14 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg leading-relaxed">
-              As a final year Computer Science student, I've spent the past few years building a solid 
+              As a computer science graduate, I've spent the past few years building a solid 
               foundation in software development, algorithms, and system design. My journey 
               has been driven by curiosity and a desire to solve real-world problems 
               with technology.
             </p>
             
             <p className="text-lg leading-relaxed text-muted-foreground">
-              I'm an aspiring cybersecurity-focused software developer based in Cape Town. 
-              I'm majoring in CS and Business Computing and I want to ultimately dive into the field
-              of digital forensics and security. I'm pursuing an entry level SAP certification currently and want to be the 
-              most well rounded developer I can. Full stack, mobile development and business process analysis are all 
-              things I can bring to the table. 
+              I am passionate about building seamless digital experiences that are not only functional but secure by design. With a strong foundation in coding and a curiosity for cybersecurity, I am dedicated to creating robust web and mobile applications that solve real-world problems.
             </p>
 
             <div className="pt-4">

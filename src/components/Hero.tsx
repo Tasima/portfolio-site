@@ -52,10 +52,7 @@ const Hero = () => {
           </div>
           
           <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-            I'm a recent graduate from the University of Cape Town with a BSc in Computer Science and Business Computing.
-            I'm about to write my SAP E_4SCPE certification and I'm pursuing an eventual OSCP certification.
-
-            
+              I'm a recent graduate from the University of Cape Town with a BSc in Computer Science and Business Computing. I'm about to write my SAP E_4SCPE certification and I'm pursuing an eventual OSCP certification.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
